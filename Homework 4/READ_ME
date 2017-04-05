@@ -1,0 +1,44 @@
+		HOMEWORK 4
+
+You are required to write a Java program for simulating card game and draw UML diagram
+for this application.
+***** Each card has the following properties:
+• number(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, J(11), Q(12), K(13)),
+• type(SPADES, HEARTS, DIAMONDS, CLUBS),
+• score.
+→ Score for each card is calculated as follows:
+SPADES → score = number * 5
+HEARTS → score = number * 7
+DIAMONDS → score = number * 9
+CLUBS → score = number * 11
+***** Each desk has 52 cards composed of 13 cards per type. Desk should create cards and shuffle
+them with its init() method.
+The game turns between the HumanPlayer and the ComputerPlayer.
+***** Each player has the following properties:
+• name,
+• score.
+***** At the end of the game, final score should be saved as “humanPlayerName_computerPlayerName.txt” as in the following format:
+humanPlayerName:humanPlayerScore
+computerPlayerName:computerPlayerScore
+***** The game should be simulated as follows:
+1. As a first, you should ask name to the human player and give name randomly to the computer player(e.g. computerPlayer#1).
+2. The simulation should distribute cards equally between both players. Each player should
+have 26 cards.
+3. The simulation should determine the player who will start to the game by randomly.
+4. Each player picks a single card:
+→ If computerPlayer starts first then it chooses the card randomly otherwise it should give
+decision according to humanPlayer's choosen card.
+→ humanPlayer chooses the card according to his/her hand that is shown on the console.
+The card can be chosen by giving the index of the desired card in the card list.
+5. Determines the winner of the hand:
+→ Player wins whose card number is higher than the other. Then, the score of the winner
+card is added to the winner player.
+6. Loser of the previous hand starts the next hand.
+7. Game ends after both players consume their cards.
+IMPORTANT NOTES:
+• For domain package, you should have at least following classes: Player.java, HumanPlayer.-
+java, ComputerPlayer.java, Simulation.java, Menu.java, DataAccessLayer.java, and
+GameApplication.java.
+• You should use POLYMORPHISM approach for player behaviour.
+• At least setName() and getNextCard() methods of players should be implemented differently in HumanPlayer.java and ComputerPlayer.java.
+• All of the user interactions should be implemented in Menu class.
